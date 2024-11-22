@@ -1,0 +1,137 @@
+ 
+ html{
+    scroll-behavior: smooth;
+ 
+ }
+ body{
+     
+    transition: background-color 0.5s ease, color 0.5s ease;
+ }
+.card-header img {
+    width: 40px;
+    height: 40px;
+  
+}
+ 
+body, .navbar {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.navbar-dark {
+    background-color: #1c1f24;  
+    color: #f8f9fa;  
+}
+.navbar-light {
+    background-color: #ffffff;  
+    color: #343a40;  
+}
+.div-nav {
+    position: fixed;
+    z-index: 900;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: #198754;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    border-radius: 0 0 10px 10px;  
+    margin-bottom: 30px;
+}
+ 
+
+#posts{
+    margin-top: 120px;
+ 
+}
+
+.modal{
+ z-index: 6000;
+}
+.tag span{
+    border-radius: 10px ;
+ 
+}
+ .newPost{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    transform: translateX(-50%);
+    border: none;
+    box-shadow: 0px 8px 10px  rgb(0,  0, 0, 0.7);
+ }
+ @media (max-width: 768px) {
+    .newPost{
+        position: fixed;
+        bottom: 70px;
+        right: -20px;
+        transform: translateX(-50%);
+        border: none;
+        margin-left: 5px;
+      
+    }
+}
+
+
+.modal-body textarea{
+    width: 100%;
+    max-height: 150px;
+    outline: none;
+ 
+}
+.imgeuserprofile{
+    width: 50px;
+    height: 50px;
+}
+.image-comments{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.addCommentContainer .content-comment{
+outline: none;
+
+}
+ 
+body.modal-open {
+    overflow: auto !important;
+}
+
+.contentPost{
+margin-top: 150px;
+}
+  .imgeuser img{
+ width: 250px; 
+}
+@media(max-width:767px){
+    .contentPost{
+      flex-direction: column;
+        }
+        .author{
+            flex-wrap: wrap;
+        }
+}
+ 
+.imgeuserprofile {
+    max-width: 100%;  
+    height: auto;
+}
+
+.newPost {
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;
+}
+
+textarea, input {
+    width: 100%; 
+    box-sizing: border-box;  
+}
+
+.newPost .bi{
+    cursor: pointer;
+}
