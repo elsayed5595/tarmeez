@@ -212,7 +212,7 @@ btnLogin.addEventListener("click", () => {
                 </div>
                 <div class="addCommentContainer py-4 align-items-center">
                     <input class="content-comment w-50 border-0 border-bottom border-black" type="text" placeholder="add comment">
-                    <button class="btnAddcomment btn ms-2 bg-success text-white">Add comment</button>
+                    <button class="btnAddcomment btn ms-2 bg-primary text-white">Add comment</button>
                 </div>
             `;
 
@@ -241,7 +241,11 @@ btnLogin.addEventListener("click", () => {
                     const tokenUsre = localStorage.getItem("token");
 
                     if (!bodyText) {
-                        appendAlert("يرجى إدخال تعليق", "warning");
+                        appendAlert("Please enter your comment", "warning");
+                        setTimeout(() => {
+                            alertPlaceholder.innerHTML="";
+                        },1000);
+                         
                         return;
                     }
 
@@ -332,3 +336,6 @@ document.addEventListener('hidden.bs.modal', function (event) {
     document.body.classList.remove('modal-open');
     document.body.style.overflow = 'auto';
 });
+
+
+ 

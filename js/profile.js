@@ -252,7 +252,7 @@ async  function getdataUser(){
 }
 
 function getUserPosts() {
-    const postsContainer = document.getElementById('post'); // تعريف العنصر
+    const postsContainer = document.getElementById('post'); 
     
     axios.get(`https://tarmeezacademy.com/api/v1/users/${profileId}/posts`)
         .then((response) => {
@@ -294,3 +294,6 @@ document.addEventListener('hidden.bs.modal', function (event) {
     document.body.classList.remove('modal-open');
     document.body.style.overflow = 'auto';
 });
+
+  
+ 

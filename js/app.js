@@ -13,7 +13,7 @@ window.addEventListener("scroll", async function (){
     const endPage = window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
      if (endPage && !isFetching){
         isFetching = true;
-        await fetchData(page += 1);
+        await fetchData(page += 2);
         isFetching = false;
     }
 });
@@ -22,14 +22,12 @@ window.addEventListener("scroll", async function (){
 // get data
  
     async function fetchData(page) {
-        const link = `https://tarmeezacademy.com/api/v1/posts?page=${page}`; 
+        const link = `https://tarmeezacademy.com/api/v1/posts?page=${page}&limit=100`; 
         try {
-            const respons = await axios.get(link, {
-               
-            });
+            const respons = await axios.get(link);
      
         datPost = respons.data.data;
- 
+         console.log(datPost)
         localStorage.setItem("datPostobj",JSON.stringify(datPost));
         let fragment = document.createDocumentFragment();
         postTitle = "";        
@@ -530,4 +528,29 @@ profile.addEventListener('click', () => {
      }
     }
  
+ 
+    function showLoader() {
+        document.getElementById('loader').style.display = 'block';
+      }
+      function hideLoader() {
+        document.getElementById('loader').style.display = 'none';
+      }
+      
+      // Example: Show loader when Create Post button is clicked
+      postUserContainer.addEventListener('click', () => {
+        showLoader();
+        setTimeout(hideLoader, 2000); // Simulate a delay for demonstration
+      });
+      
+      document.querySelector('.Profile').addEventListener('click', () => {
+        showLoader();
+        setTimeout(hideLoader, 2000); // Simulate a delay for demonstration
+      });
+      
+      document.querySelector('.Home').addEventListener('click', () => {
+        showLoader();
+        homeLocation()
+        setTimeout(hideLoader, 2000); // Simulate a delay for demonstration
+      });
+      
      
