@@ -113,6 +113,18 @@
           <div  id="posts" class="bg-white shadow-sm rounded p-3">
  </div>
 </div>
+<!-- creat post modal -->
+<button class="newPost" data-bs-toggle="modal" data-bs-target="#postModal"> 
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-align-center sw-bold" viewBox="0 0 16 16">
+     <path d="M8 1a.5.5 0 0 1 .5.5V6h-1V1.5A.5.5 0 0 1 8 1m0 14a.5.5 0 0 1-.5-.5V10h1v4.5a.5.5 0 0 1-.5.5M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+  </svg>
+ </button>
+ <div id="loader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.9); z-index: 1000; text-align: center;">
+   <div class="spinner-border text-success" role="status" style="margin-top: 20%;">
+     <span class="visually-hidden">Loading...</span>
+   </div>
+ </div>
+ </div>
 </div>
 
 <!--strat  modal lgin -->
@@ -162,12 +174,12 @@
 
                  <div class="mb-3">
                   
-                     <input type="text" class="form-control" id="register-username" placeholder="user name">
+                     <input maxlength="15" minlength="0" type="text" class="form-control" id="register-username" placeholder="user name">
                  </div>
                
                  <div class="mb-3">
           
-                     <input type="password" class="form-control" id="register-password" placeholder="Password">
+                     <input maxlength="10" minlength="0" type="password" class="form-control" id="register-password" placeholder="Password">
                  </div>
                  <div class="mb-3">
           
@@ -223,18 +235,7 @@
  </div>
 </div>
 
-<!-- creat post modal -->
-<button class="newPost" data-bs-toggle="modal" data-bs-target="#postModal"> 
- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-align-center sw-bold" viewBox="0 0 16 16">
-    <path d="M8 1a.5.5 0 0 1 .5.5V6h-1V1.5A.5.5 0 0 1 8 1m0 14a.5.5 0 0 1-.5-.5V10h1v4.5a.5.5 0 0 1-.5.5M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
- </svg>
-</button>
-<div id="loader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.9); z-index: 1000; text-align: center;">
-  <div class="spinner-border text-success" role="status" style="margin-top: 20%;">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-</div>
-</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

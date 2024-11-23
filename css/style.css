@@ -18,7 +18,7 @@ body,
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.navbar-dark {
+.navbar-dark{
   background-color: #1c1f24; /* رمادي داكن */
   color: #ffffff; /* أبيض */
 }
@@ -34,7 +34,7 @@ body,
   top: 0 !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  background-color: #3b5998;  
+  background-color: #ADD8E6;  
   color: #ffffff !important;  
   border-color: #0077b5 !important;  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,11 +60,11 @@ body,
   border-radius: 50%;
   position: fixed;
   bottom: 40px;
-  right: 30px;
+  right: 80px;
   transform: translateX(-50%);
   border: none;
   background-color: #2955b3 ;  
-  color: #ffffff; /* أبيض */
+  color: #ffffff;  
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.87);
   transition: all 0.3s ease;
 }
@@ -73,6 +73,27 @@ body,
   background-color: #033bb6 ;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.7);
 }
+.newPostDrak { background-color: black;} 
+.newPostDrak:hover { background-color: #162c6b;}
+
+.newPost svg {
+
+  fill: white;  
+  transition: fill 0.3s ease;
+}
+
+.newPost:hover svg {
+  fill: #ffcc00;  
+}
+
+.newPostDrak svg {
+  fill: #f8f9fa; 
+}
+
+.newPostDrak:hover svg {
+  fill: #ffcc00;  
+}
+
 
 .modal-content {
   border-radius: 10px;
@@ -169,8 +190,9 @@ input {
 .author{
   padding-left:3px;
   flex-wrap: wrap;
+  max-width: 75%;
 }
  
 .nav-link.active {
-  color:#D3D3D3  !important; /* لون مميز */
+  color:#D3D3D3  !important;  
 }

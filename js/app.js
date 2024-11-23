@@ -446,6 +446,8 @@ if(idPost){
 }
 let navcontent = document.querySelector('.nav-content');
 let themeIcon = document.querySelector('.theme-icon'); 
+ let newpost= document.querySelector('.newPost');
+ let svg=document.querySelector('.newPost svg');
 
 // Function to toggle between light and dark themes
 function toggleTheme() {
@@ -465,6 +467,7 @@ function toggleTheme() {
         navcontent.classList.remove('navbar-light');
         themeIcon.classList.add('fa-sun');  
         themeIcon.classList.remove('fa-moon');
+        newpost.classList.add('newPostDrak');
     } else {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "#343a40";
@@ -472,6 +475,7 @@ function toggleTheme() {
         navcontent.classList.remove('navbar-dark');
         themeIcon.classList.add('fa-moon');  
         themeIcon.classList.remove('fa-sun');
+        newpost.classList.remove('newPostDrak');
     }
 }
 
@@ -489,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navcontent.classList.remove('navbar-light');
         themeIcon.classList.add('fa-sun');  
         themeIcon.classList.remove('fa-moon');
+        newpost.classList.add('newPostDrak');
     } else {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "#343a40";
@@ -496,6 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navcontent.classList.remove('navbar-dark');
         themeIcon.classList.add('fa-moon');  
         themeIcon.classList.remove('fa-sun');
+        newpost.classList.remove('newPostDrak'); 
     }
 });
 
