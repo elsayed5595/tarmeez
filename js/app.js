@@ -395,7 +395,7 @@ function postclickid(data) {
         console.error("Error parsing JSON:", error);
     }
 
-}
+};
  
 //test mode Button moadel
 function openModal(mode, postData) {
@@ -415,13 +415,13 @@ function openModal(mode, postData) {
 
     const postModal = new bootstrap.Modal(document.getElementById('postModal'));
     postModal.show();
-}
+};
 
 //remove over lay Background in close modal
 function closeModal() {
     const postModal = bootstrap.Modal.getInstance(document.getElementById('postModal'));
     postModal.hide();
-}
+};
 
  function deletepost(id){
 let idPost=id;
@@ -443,7 +443,7 @@ if(idPost){
     });
     }
     
-}
+};
 let navcontent = document.querySelector('.nav-content');
 let themeIcon = document.querySelector('.theme-icon'); 
  let newpost= document.querySelector('.newPost');
@@ -476,8 +476,8 @@ function toggleTheme() {
         themeIcon.classList.add('fa-moon');  
         themeIcon.classList.remove('fa-sun');
         newpost.classList.remove('newPostDrak');
-    }
-}
+    };
+};
 
 // Event listener to load the saved theme when the document is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -540,7 +540,7 @@ profile.addEventListener('click', () => {
       }
       function hideLoader() {
         document.getElementById('loader').style.display = 'none';
-      }
+      };
       
       // Example: Show loader when Create Post button is clicked
       postUserContainer.addEventListener('click', () => {
@@ -559,4 +559,4 @@ profile.addEventListener('click', () => {
         setTimeout(hideLoader, 2000); // Simulate a delay for demonstration
       });
       
-     
+       
