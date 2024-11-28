@@ -27,7 +27,7 @@ window.addEventListener("scroll", async function (){
             const respons = await axios.get(link);
      
         datPost = respons.data.data;
-         console.log(datPost)
+       
         localStorage.setItem("datPostobj",JSON.stringify(datPost));
         let fragment = document.createDocumentFragment();
         postTitle = "";        
@@ -446,8 +446,8 @@ if(idPost){
 };
 let navcontent = document.querySelector('.nav-content');
 let themeIcon = document.querySelector('.theme-icon'); 
- let newpost= document.querySelector('.newPost');
- let svg=document.querySelector('.newPost svg');
+let newpost = document.querySelector('.newPost');
+let svg = document.querySelector('.newPost svg');
 
 // Function to toggle between light and dark themes
 function toggleTheme() {
@@ -461,50 +461,45 @@ function toggleTheme() {
 
     // Apply the appropriate background and text colors based on the new theme
     if (newTheme === 'dark') {
-        document.body.style.backgroundColor = "#343a40";
-        document.body.style.color = "#f8f9fa";
-        navcontent.classList.add('navbar-dark');
+        document.body.classList.add('dark-mode');
+        navcontent.classList.add('navbar-dark-mode');
         navcontent.classList.remove('navbar-light');
         themeIcon.classList.add('fa-sun');  
         themeIcon.classList.remove('fa-moon');
         newpost.classList.add('newPostDrak');
     } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "#343a40";
+        document.body.classList.remove('dark-mode');
         navcontent.classList.add('navbar-light');
-        navcontent.classList.remove('navbar-dark');
+        navcontent.classList.remove('navbar-dark-mode');
         themeIcon.classList.add('fa-moon');  
         themeIcon.classList.remove('fa-sun');
         newpost.classList.remove('newPostDrak');
-    };
-};
+    }
+}
 
 // Event listener to load the saved theme when the document is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.Home').classList.add('active')
+    document.querySelector('.Home').classList.add('active');
     const savedTheme = localStorage.getItem("mood") || 'light';
     document.documentElement.setAttribute('data-bs-theme', savedTheme);
 
     // Apply the appropriate background and text colors based on the saved theme
     if (savedTheme === 'dark') {
-        document.body.style.backgroundColor = "#343a40";
-        document.body.style.color = "#f8f9fa";
-        navcontent.classList.add('navbar-dark');
+        document.body.classList.add('dark-mode');
+        navcontent.classList.add('navbar-dark-mode');
         navcontent.classList.remove('navbar-light');
         themeIcon.classList.add('fa-sun');  
         themeIcon.classList.remove('fa-moon');
         newpost.classList.add('newPostDrak');
     } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "#343a40";
+        document.body.classList.remove('dark-mode');
         navcontent.classList.add('navbar-light');
-        navcontent.classList.remove('navbar-dark');
+        navcontent.classList.remove('navbar-dark-mode');
         themeIcon.classList.add('fa-moon');  
         themeIcon.classList.remove('fa-sun');
         newpost.classList.remove('newPostDrak'); 
     }
 });
-
 
 // close model overFlow
 document.addEventListener('hidden.bs.modal', function (event) {

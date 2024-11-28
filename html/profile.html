@@ -19,38 +19,80 @@
       <div id="liveAlertPlaceholder" class="d-flex justify-content-center align-items-center bg-body-secondary text-center"></div>
     </div>
     <!-- End Alert -->
-
-    <nav class="navbar mt-2 rounded-bottom shadow p-2 mb-2 navbar-expand-lg nav-content navbar-light">
-      <div class="container text-center">
+    <nav class="navbar mt-2 rounded-bottom shadow p-2 mb-2 navbar-expand-lg  navbar-light">
+      <div class="container nav-content  text-center">
         <a class="navbar-brand fw-bold text-white" href="#">Tarmeez</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="Home nav-link  fs-5 text-white" href="./index.html" aria-current="page">Home</a>
+              <a
+                class="Home nav-link active fs-5 text-white"
+                href="./index.html"
+                aria-current="page"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="Profile nav-link active fs-5 text-white" href="./profile.html">Profile</a>
+              <a class="Profile nav-link fs-5 text-white" href="./profile.html"
+                >Profile</a
+              >
             </li>
             <!-- Dark Mode Toggle -->
-            <button type="button" class="btn btn-outline-light mx-2" onclick="toggleTheme()">
+            <button
+              type="button"
+              class="btn btn-outline-light mx-2"
+              onclick="toggleTheme()"
+            >
               <i class="theme-icon fas fa-moon"></i>
             </button>
           </ul>
           <!-- Profile Picture & Username -->
-          <div class="imgeprofilediv d-flex align-items-center justify-content-center">
+          <div
+            class="imgeprofilediv d-flex align-items-center justify-content-center"
+          >
             <div>
-              <img class="imgeuserprofile border border-white rounded-circle" src="" alt="User" />
+              <img
+                class="imgeuserprofile border border-white rounded-circle"
+                src=""
+                alt="User"
+              />
             </div>
             <span class="ms-2 fw-bold text-white userName"></span>
           </div>
           <div class="btn d-flex justify-content-center">
             <!-- Buttons for Not Logged-In User -->
-            <button type="button" id="login" class="btn btn-outline-light mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
-            <button type="button" id="Register" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
-            <button type="button" id="logout" class="btn btn-danger">Logout</button>
+            <button
+              type="button"
+              id="login"
+              class="btn btn-outline-light mx-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              id="Register"
+              class="btn btn-outline-light"
+              data-bs-toggle="modal"
+              data-bs-target="#registerModal"
+            >
+              Register
+            </button>
+            <button type="button" id="logout" class="btn btn-danger">
+              Logout
+            </button>
           </div>
         </div>
       </div>
