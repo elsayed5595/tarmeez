@@ -24,7 +24,7 @@ body {
   padding: 10px 20px;
   background: linear-gradient(135deg, #3498db, #2ecc71);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .navbar:hover {
@@ -69,12 +69,12 @@ body {
 
 /* Navbar Styles */
 .navbar-dark {
-  background-color: #1c1f24; 
+  background: linear-gradient(135deg, #1c1f24, #2c3e50); 
   color: #ecf0f1;  
 }
 
 .navbar-light {
-  background-color: #3498db;  
+  background: linear-gradient(135deg, #3498db, #2ecc71);  
   color: #ffffff;  
 }
 
@@ -153,19 +153,18 @@ body {
   right: 26px;
   transform: translateX(-50%);
   border: none;
- background-color: #3498dbde;
+  background-color: #3498dbde;
   color: #ffffff;  
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.87);
   transition: all 0.3s ease;
 }
 
 .newPost:hover {
-     
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.7);
 }
 
 .newPostDrak { 
-  background-color:black !important;
+  background-color: #34495e !important;
 } 
 
 .newPostDrak:hover { 
@@ -286,7 +285,7 @@ body.dark-mode {
 }
 
 .navbar-dark-mode {
-  background-color: #1c1f24;
+  background: linear-gradient(135deg, #1c1f24, #2c3e50);
   color: #ecf0f1;
 }
 
